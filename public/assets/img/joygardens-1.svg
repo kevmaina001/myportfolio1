@@ -1,0 +1,56 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#F8FAFC"/>
+  
+  <!-- Browser Chrome -->
+  <rect x="0" y="0" width="600" height="40" fill="#E2E8F0"/>
+  <circle cx="20" cy="20" r="6" fill="#EF4444"/>
+  <circle cx="40" cy="20" r="6" fill="#F59E0B"/>
+  <circle cx="60" cy="20" r="6" fill="#10B981"/>
+  
+  <!-- URL Bar -->
+  <rect x="100" y="12" width="400" height="16" rx="8" fill="white"/>
+  <text x="110" y="23" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">joygardens.vercel.app</text>
+  
+  <!-- Main Content -->
+  <rect x="0" y="40" width="600" height="360" fill="white"/>
+  
+  <!-- Header with School Logo Area -->
+  <rect x="0" y="40" width="600" height="100" fill="#16A34A" opacity="0.1"/>
+  <circle cx="100" cy="90" r="25" fill="#16A34A" opacity="0.8"/>
+  <text x="100" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">JG</text>
+  <text x="140" y="85" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">Joy Gardens School</text>
+  <text x="140" y="105" font-family="Arial, sans-serif" font-size="12" fill="#6B7280">Excellence in Education</text>
+  
+  <!-- Navigation -->
+  <rect x="40" y="160" width="60" height="8" rx="4" fill="#64748B"/>
+  <rect x="120" y="160" width="80" height="8" rx="4" fill="#64748B"/>
+  <rect x="220" y="160" width="70" height="8" rx="4" fill="#16A34A"/>
+  <rect x="310" y="160" width="80" height="8" rx="4" fill="#64748B"/>
+  <rect x="410" y="160" width="60" height="8" rx="4" fill="#64748B"/>
+  
+  <!-- Main Hero Section -->
+  <rect x="40" y="190" width="520" height="100" rx="8" fill="#F0FDF4"/>
+  <text x="300" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1F2937">Welcome to Joy Gardens</text>
+  <text x="300" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#6B7280">Nurturing young minds with innovative learning approaches</text>
+  <rect x="270" y="255" width="60" height="20" rx="10" fill="#16A34A"/>
+  <text x="300" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Learn More</text>
+  
+  <!-- Feature Cards -->
+  <rect x="40" y="310" width="150" height="70" rx="8" fill="#F1F5F9"/>
+  <rect x="210" y="310" width="150" height="70" rx="8" fill="#F1F5F9"/>
+  <rect x="380" y="310" width="150" height="70" rx="8" fill="#F1F5F9"/>
+  
+  <!-- Feature Icons -->
+  <circle cx="115" cy="330" r="12" fill="#16A34A"/>
+  <circle cx="285" cy="330" r="12" fill="#0EA5E9"/>
+  <circle cx="455" cy="330" r="12" fill="#F59E0B"/>
+  
+  <!-- Feature Text -->
+  <text x="115" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#374151">Academics</text>
+  <text x="285" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#374151">Activities</text>
+  <text x="455" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#374151">Community</text>
+  
+  <rect x="50" y="365" width="130" height="3" rx="1" fill="#9CA3AF"/>
+  <rect x="220" y="365" width="130" height="3" rx="1" fill="#9CA3AF"/>
+  <rect x="390" y="365" width="130" height="3" rx="1" fill="#9CA3AF"/>
+</svg>

@@ -1,0 +1,58 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#F8FAFC"/>
+  
+  <!-- Browser Chrome -->
+  <rect x="0" y="0" width="600" height="40" fill="#E2E8F0"/>
+  <circle cx="20" cy="20" r="6" fill="#EF4444"/>
+  <circle cx="40" cy="20" r="6" fill="#F59E0B"/>
+  <circle cx="60" cy="20" r="6" fill="#10B981"/>
+  
+  <!-- URL Bar -->
+  <rect x="100" y="12" width="400" height="16" rx="8" fill="white"/>
+  <text x="110" y="23" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">khisa-foundation.org</text>
+  
+  <!-- Main Content -->
+  <rect x="0" y="40" width="600" height="360" fill="white"/>
+  
+  <!-- Header with Logo Area -->
+  <rect x="0" y="40" width="600" height="120" fill="#EC4899" opacity="0.1"/>
+  <rect x="40" y="60" width="150" height="24" rx="4" fill="#EC4899" opacity="0.8"/>
+  <text x="50" y="78" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">KHISA FOUNDATION</text>
+  
+  <!-- Hero Section -->
+  <text x="300" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1F2937">Empowering Lives Through Community</text>
+  <text x="300" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#6B7280">Pad Drives • Mentorship • Digital Literacy</text>
+  
+  <!-- Navigation -->
+  <rect x="40" y="180" width="60" height="8" rx="4" fill="#64748B"/>
+  <rect x="120" y="180" width="80" height="8" rx="4" fill="#64748B"/>
+  <rect x="220" y="180" width="70" height="8" rx="4" fill="#EC4899"/>
+  <rect x="310" y="180" width="80" height="8" rx="4" fill="#64748B"/>
+  
+  <!-- Program Cards -->
+  <rect x="40" y="210" width="160" height="120" rx="8" fill="#F1F5F9"/>
+  <rect x="220" y="210" width="160" height="120" rx="8" fill="#F1F5F9"/>
+  <rect x="400" y="210" width="160" height="120" rx="8" fill="#F1F5F9"/>
+  
+  <!-- Program Icons (represented as colored circles) -->
+  <circle cx="120" cy="250" r="20" fill="#EC4899"/>
+  <circle cx="300" cy="250" r="20" fill="#8B5CF6"/>
+  <circle cx="480" cy="250" r="20" fill="#06B6D4"/>
+  
+  <!-- Program Names -->
+  <text x="120" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#374151">Pad Drives</text>
+  <text x="300" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#374151">Mentorship</text>
+  <text x="480" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#374151">Digital Literacy</text>
+  
+  <!-- Program Descriptions -->
+  <rect x="50" y="295" width="140" height="4" rx="2" fill="#9CA3AF"/>
+  <rect x="50" y="305" width="120" height="4" rx="2" fill="#9CA3AF"/>
+  <rect x="230" y="295" width="140" height="4" rx="2" fill="#9CA3AF"/>
+  <rect x="230" y="305" width="130" height="4" rx="2" fill="#9CA3AF"/>
+  <rect x="410" y="295" width="140" height="4" rx="2" fill="#9CA3AF"/>
+  <rect x="410" y="305" width="110" height="4" rx="2" fill="#9CA3AF"/>
+  
+  <!-- Footer -->
+  <rect x="0" y="350" width="600" height="50" fill="#F8FAFC"/>
+  <text x="300" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#6B7280">California's Central Valley</text>
+</svg>

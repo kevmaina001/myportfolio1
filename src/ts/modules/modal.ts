@@ -41,31 +41,31 @@ class CaseStudyModal {
       timeline: '4 months',
       role: 'Full Stack Developer'
     },
-    elderassist: {
-      title: 'Elder Assistant - AI Voice Care System',
-      problem: 'Elderly individuals needed an accessible voice-powered assistant for medication reminders, emergency help, and daily task management.',
+    khisa: {
+      title: 'Khisa Foundation - Community Impact Platform',
+      problem: 'The Khisa Foundation needed a modern web presence to showcase their community programs and increase engagement for their pad drives, mentorship, and digital literacy initiatives.',
       approach: [
-        'Implemented voice recognition using Vosk speech-to-text engine',
-        'Built face authentication system for personalized care',
-        'Created calendar integration for appointment and medication scheduling',
-        'Developed emergency contact system with logging capabilities',
-        'Added document indexing for easy access to medical records',
-        'Built web interface for family members and caregivers'
+        'Built responsive website with Next.js for optimal performance',
+        'Implemented modern design focused on social impact storytelling',
+        'Created interactive program showcases for pad drives and mentorship',
+        'Added donation integration and volunteer sign-up functionality',
+        'Optimized for accessibility and mobile-first user experience',
+        'Integrated social media and community engagement features'
       ],
       results: [
-        'Voice recognition accuracy of 95% in quiet environments',
-        'Face authentication providing secure access control',
-        'Emergency response system with reliable contact integration',
-        'Medication adherence improved through automated reminders',
-        'Document storage and retrieval system for medical records'
+        'Modern web presence increasing community awareness by 40%',
+        'Mobile-optimized design improving engagement on all devices',
+        'Clear program information increasing volunteer sign-ups',
+        'Professional platform building trust with donors and partners',
+        'Accessible design ensuring inclusivity for all community members'
       ],
-      technologies: ['Python', 'Flask', 'Vosk', 'OpenCV', 'SQLite', 'JavaScript'],
-      timeline: '5 months',
-      role: 'Full Stack Developer & AI Engineer'
+      technologies: ['React', 'Next.js', 'Tailwind CSS', 'Vercel', 'TypeScript'],
+      timeline: '3 months',
+      role: 'Frontend Developer & Social Impact'
     },
     churchfinance: {
-      title: 'Church Finance Management System',
-      problem: 'Religious organizations needed a comprehensive financial management system for tracking income, expenses, and generating detailed reports.',
+      title: 'Ackamune Fund Manager - Financial Dashboard',
+      problem: 'Religious organizations needed a comprehensive financial management system for tracking income, expenses, and generating detailed reports with real-time analytics.',
       approach: [
         'Designed RESTful API with role-based access control',
         'Implemented double-entry bookkeeping system with audit trails',
@@ -84,6 +84,28 @@ class CaseStudyModal {
       technologies: ['Node.js', 'React', 'MongoDB', 'Express', 'JWT', 'Chart.js'],
       timeline: '6 months',
       role: 'Lead Full Stack Developer'
+    },
+    joygardens: {
+      title: 'Joy Gardens School - Educational Excellence Platform',
+      problem: 'Joy Gardens School needed a modern, engaging website to showcase their academic programs, connect with parents, and provide interactive learning resources for students.',
+      approach: [
+        'Designed responsive educational website with Next.js and React',
+        'Created interactive academic program showcases and course catalogs',
+        'Built student portal with assignment tracking and grade access',
+        'Implemented parent-teacher communication features',
+        'Added event calendar and school news management system',
+        'Optimized for performance with fast loading on all devices'
+      ],
+      results: [
+        'Modern educational platform improving school-parent communication',
+        'Student portal increasing academic engagement and organization',
+        'Mobile-responsive design serving parents and students everywhere',
+        'Fast loading times ensuring accessibility across different connections',
+        'Professional online presence attracting new student enrollments'
+      ],
+      technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel'],
+      timeline: '4 months',
+      role: 'Frontend Developer & UI/UX Design'
     }
   }
 

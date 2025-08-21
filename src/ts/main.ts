@@ -24,66 +24,69 @@ function initAnimations() {
   const heroImage = document.querySelector('[data-aos="hero-image"]')
   const statCards = document.querySelectorAll('[data-aos="stat-card"]')
 
-  // Set initial states
+  // Set initial states with GPU acceleration hints
   gsap.set([heroLines, heroTagline, heroCtas, heroSocials], { 
     opacity: 0, 
-    y: 30 
+    y: 30,
+    force3D: true
   })
   gsap.set(heroImage, { 
     opacity: 0, 
-    scale: 0.9 
+    scale: 0.9,
+    force3D: true
   })
   gsap.set(statCards, { 
     opacity: 0, 
-    scale: 0.8 
+    scale: 0.8,
+    force3D: true
   })
 
-  // Create timeline
-  const tl = gsap.timeline({ delay: 0.5 })
+  // Create optimized timeline with shorter durations
+  const tl = gsap.timeline({ delay: 0.3 })
   
   tl.to(heroLines[0], { 
-    duration: 0.8, 
+    duration: 0.5, 
     opacity: 1, 
     y: 0, 
     ease: "power2.out" 
   })
   .to(heroLines[1], { 
-    duration: 0.8, 
+    duration: 0.5, 
     opacity: 1, 
     y: 0, 
     ease: "power2.out" 
-  }, "-=0.4")
+  }, "-=0.3")
   .to(heroTagline, { 
-    duration: 0.8, 
+    duration: 0.5, 
     opacity: 1, 
     y: 0, 
     ease: "power2.out" 
-  }, "-=0.4")
+  }, "-=0.3")
   .to(heroCtas, { 
-    duration: 0.8, 
+    duration: 0.5, 
     opacity: 1, 
     y: 0, 
     ease: "power2.out" 
-  }, "-=0.4")
+  }, "-=0.3")
   .to(heroSocials, { 
-    duration: 0.8, 
+    duration: 0.5, 
     opacity: 1, 
     y: 0, 
     ease: "power2.out" 
-  }, "-=0.4")
+  }, "-=0.3")
   .to(heroImage, { 
-    duration: 1, 
-    opacity: 1, 
-    scale: 1, 
-    ease: "power2.out" 
-  }, "-=0.6")
-  .to(statCards, { 
     duration: 0.6, 
     opacity: 1, 
     scale: 1, 
-    ease: "back.out(1.7)",
-    stagger: 0.2 
+    ease: "power2.out" 
   }, "-=0.4")
+  .to(statCards, { 
+    duration: 0.4, 
+    opacity: 1, 
+    scale: 1, 
+    ease: "back.out(1.4)",
+    stagger: 0.1 
+  }, "-=0.3")
 }
 
 function initScrollTriggers() {
@@ -94,99 +97,106 @@ function initScrollTriggers() {
     return // Skip animations if user prefers reduced motion
   }
 
-  // Section headers animation
+  // Section headers animation - optimized
   const sectionHeaders = document.querySelectorAll('section h2')
   sectionHeaders.forEach(header => {
     gsap.fromTo(header, 
       { 
         opacity: 0, 
-        y: 50 
+        y: 30,
+        force3D: true
       },
       {
         opacity: 1,
         y: 0,
-        duration: 1,
+        duration: 0.5,
         ease: "power2.out",
         scrollTrigger: {
           trigger: header,
-          start: "top 80%",
-          once: true
+          start: "top 85%",
+          once: true,
+          fastScrollEnd: true
         }
       }
     )
   })
 
-  // Cards animation on scroll
+  // Cards animation on scroll - batch process for better performance
   const cards = document.querySelectorAll('.card')
-  cards.forEach((card, index) => {
-    gsap.fromTo(card,
+  if (cards.length > 0) {
+    ScrollTrigger.batch(cards, {
+      onEnter: (elements) => {
+        gsap.fromTo(elements, 
+          {
+            opacity: 0,
+            y: 30,
+            force3D: true
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.4,
+            ease: "power2.out",
+            stagger: 0.05
+          }
+        )
+      },
+      start: "top 90%",
+      once: true
+    })
+  }
+
+  // Experience timeline animation - optimized
+  const timelineItems = document.querySelectorAll('#experience .relative')
+  timelineItems.forEach((item, index) => {
+    const card = item.querySelector('.card')
+    if (card) {
+      gsap.fromTo(card,
+        {
+          opacity: 0,
+          x: index % 2 === 0 ? -30 : 30,
+          force3D: true
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.5,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: item,
+            start: "top 85%",
+            once: true,
+            fastScrollEnd: true
+          }
+        }
+      )
+    }
+  })
+
+  // Tech stack badges animation - simplified
+  const techBadges = document.querySelectorAll('#about .flex-wrap span')
+  if (techBadges.length > 0) {
+    gsap.fromTo(techBadges,
       {
         opacity: 0,
-        y: 60,
-        scale: 0.95
+        y: 20,
+        force3D: true
       },
       {
         opacity: 1,
         y: 0,
-        scale: 1,
-        duration: 0.8,
+        duration: 0.3,
         ease: "power2.out",
+        stagger: 0.05,
         scrollTrigger: {
-          trigger: card,
+          trigger: techBadges[0],
           start: "top 85%",
-          once: true
-        },
-        delay: index * 0.1
-      }
-    )
-  })
-
-  // Experience timeline animation
-  const timelineItems = document.querySelectorAll('#experience .relative')
-  timelineItems.forEach((item, index) => {
-    gsap.fromTo(item.querySelector('.card'),
-      {
-        opacity: 0,
-        x: index % 2 === 0 ? -50 : 50,
-        scale: 0.9
-      },
-      {
-        opacity: 1,
-        x: 0,
-        scale: 1,
-        duration: 0.8,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: item,
-          start: "top 80%",
-          once: true
+          once: true,
+          fastScrollEnd: true
         }
       }
     )
-  })
-
-  // Tech stack badges animation
-  const techBadges = document.querySelectorAll('#about .flex-wrap span')
-  gsap.fromTo(techBadges,
-    {
-      opacity: 0,
-      scale: 0.8,
-      y: 20
-    },
-    {
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      duration: 0.6,
-      ease: "back.out(1.7)",
-      stagger: 0.1,
-      scrollTrigger: {
-        trigger: techBadges[0],
-        start: "top 80%",
-        once: true
-      }
-    }
-  )
+  }
 
   // Parallax effect for background elements
   gsap.to('.bg-mesh', {
@@ -212,32 +222,8 @@ function initScrollTriggers() {
   })
 }
 
-// Add card hover effects
-document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.card-hover')
-  
-  cards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        gsap.to(card, {
-          y: -8,
-          duration: 0.3,
-          ease: "power2.out"
-        })
-      }
-    })
-    
-    card.addEventListener('mouseleave', () => {
-      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        gsap.to(card, {
-          y: 0,
-          duration: 0.3,
-          ease: "power2.out"
-        })
-      }
-    })
-  })
-})
+// Optimize card hover with CSS-only approach - remove heavy JS animations
+// Hover effects are now handled by optimized CSS transitions in styles.css
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

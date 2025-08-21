@@ -1,5 +1,5 @@
 class ThemeManager {
-  private theme: 'light' | 'dark' = 'light'
+  private theme: 'light' | 'dark' = 'dark'
   private toggleButton: HTMLElement | null = null
   private sunIcon: HTMLElement | null = null
   private moonIcon: HTMLElement | null = null
@@ -13,8 +13,8 @@ class ThemeManager {
     this.sunIcon = document.getElementById('sun-icon')
     this.moonIcon = document.getElementById('moon-icon')
 
-    // Get stored theme or default to system preference
-    this.theme = this.getStoredTheme() || this.getSystemTheme()
+    // Get stored theme or default to dark mode
+    this.theme = this.getStoredTheme() || 'dark'
     this.applyTheme(this.theme)
     this.updateIcons()
 
@@ -75,21 +75,14 @@ class ThemeManager {
   private toggleTheme() {
     const newTheme = this.theme === 'light' ? 'dark' : 'light'
     
-    // Add transition class for smooth theme switching
-    document.documentElement.classList.add('theme-transitioning')
-    
+    // Simplified theme switching with minimal DOM manipulation
     this.applyTheme(newTheme)
     this.updateIcons()
     
     // Store preference
     localStorage.setItem('theme', newTheme)
-    
-    // Remove transition class after animation
-    setTimeout(() => {
-      document.documentElement.classList.remove('theme-transitioning')
-    }, 300)
 
-    // Optional: Add a subtle animation to the toggle button
+    // Lightweight button feedback - CSS handles the transition
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       this.animateToggle()
     }
@@ -98,9 +91,10 @@ class ThemeManager {
   private animateToggle() {
     if (!this.toggleButton) return
     
-    this.toggleButton.style.transform = 'scale(0.9)'
+    // Use CSS class instead of direct style manipulation for better performance
+    this.toggleButton.classList.add('theme-toggle-active')
     setTimeout(() => {
-      this.toggleButton!.style.transform = 'scale(1)'
+      this.toggleButton!.classList.remove('theme-toggle-active')
     }, 150)
   }
 
@@ -109,15 +103,12 @@ class ThemeManager {
   }
 }
 
-// Add CSS for smooth theme transitions
+// Add optimized CSS for theme toggle feedback
 const style = document.createElement('style')
 style.textContent = `
-  .theme-transitioning,
-  .theme-transitioning *,
-  .theme-transitioning *:before,
-  .theme-transitioning *:after {
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
-    transition-delay: 0s !important;
+  .theme-toggle-active {
+    transform: scale(0.9);
+    transition: transform 0.15s ease;
   }
 `
 document.head.appendChild(style)
