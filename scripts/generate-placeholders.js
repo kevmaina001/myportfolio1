@@ -135,6 +135,144 @@ function createSocialPreview() {
 }
 
 function createProjectImage(projectName, color, description) {
+  const isGatangu = projectName.includes('Gatangu')
+  const isChurch = projectName.includes('Church')
+  const isElder = projectName.includes('Elder')
+  
+  if (isGatangu) {
+    return createGatanguMockup(color, description)
+  } else if (isChurch) {
+    return createChurchFinanceMockup(color, description)
+  } else if (isElder) {
+    return createElderAssistMockup(color, description)
+  }
+  
+  // Default fallback
+  return createDefaultMockup(projectName, color, description)
+}
+
+function createGatanguMockup(color, description) {
+  return `
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#F8FAFC"/>
+  
+  <!-- Browser Chrome -->
+  <rect x="0" y="0" width="600" height="40" fill="#E2E8F0"/>
+  <circle cx="20" cy="20" r="6" fill="#EF4444"/>
+  <circle cx="40" cy="20" r="6" fill="#F59E0B"/>
+  <circle cx="60" cy="20" r="6" fill="#10B981"/>
+  
+  <!-- URL Bar -->
+  <rect x="100" y="12" width="400" height="16" rx="8" fill="white"/>
+  <text x="110" y="23" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">gatanguenterprise.com</text>
+  
+  <!-- Main Content -->
+  <rect x="0" y="40" width="600" height="360" fill="white"/>
+  
+  <!-- Header with Logo Area -->
+  <rect x="0" y="40" width="600" height="100" fill="#10B981" opacity="0.1"/>
+  <rect x="40" y="60" width="120" height="20" rx="4" fill="#10B981" opacity="0.8"/>
+  <text x="50" y="75" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">GATANGU</text>
+  
+  <!-- Navigation -->
+  <rect x="40" y="160" width="60" height="8" rx="4" fill="#64748B"/>
+  <rect x="120" y="160" width="80" height="8" rx="4" fill="#64748B"/>
+  <rect x="220" y="160" width="70" height="8" rx="4" fill="#10B981"/>
+  <rect x="310" y="160" width="60" height="8" rx="4" fill="#64748B"/>
+  
+  <!-- Product Grid -->
+  <rect x="40" y="190" width="120" height="120" rx="8" fill="#F1F5F9"/>
+  <rect x="180" y="190" width="120" height="120" rx="8" fill="#F1F5F9"/>
+  <rect x="320" y="190" width="120" height="120" rx="8" fill="#F1F5F9"/>
+  <rect x="460" y="190" width="120" height="120" rx="8" fill="#F1F5F9"/>
+  
+  <!-- Product Images (represented as colored rectangles) -->
+  <rect x="50" y="200" width="100" height="60" rx="4" fill="#22C55E"/>
+  <rect x="190" y="200" width="100" height="60" rx="4" fill="#059669"/>
+  <rect x="330" y="200" width="100" height="60" rx="4" fill="#16A34A"/>
+  <rect x="470" y="200" width="100" height="60" rx="4" fill="#15803D"/>
+  
+  <!-- Product Names -->
+  <rect x="50" y="275" width="80" height="6" rx="3" fill="#374151"/>
+  <rect x="190" y="275" width="90" height="6" rx="3" fill="#374151"/>
+  <rect x="330" y="275" width="70" height="6" rx="3" fill="#374151"/>
+  <rect x="470" y="275" width="85" height="6" rx="3" fill="#374151"/>
+  
+  <!-- Prices -->
+  <rect x="50" y="290" width="40" height="8" rx="4" fill="#10B981" opacity="0.8"/>
+  <rect x="190" y="290" width="45" height="8" rx="4" fill="#10B981" opacity="0.8"/>
+  <rect x="330" y="290" width="35" height="8" rx="4" fill="#10B981" opacity="0.8"/>
+  <rect x="470" y="290" width="50" height="8" rx="4" fill="#10B981" opacity="0.8"/>
+  
+  <!-- Footer -->
+  <rect x="0" y="340" width="600" height="60" fill="#F8FAFC"/>
+  <text x="300" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#6B7280">${description}</text>
+</svg>`
+}
+
+function createChurchFinanceMockup(color, description) {
+  return `
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#FEFEFE"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="600" height="60" fill="#7C3AED" opacity="0.1"/>
+  <rect x="40" y="20" width="150" height="20" rx="4" fill="#7C3AED" opacity="0.8"/>
+  <text x="50" y="35" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Church Finance</text>
+  
+  <!-- Dashboard Grid -->
+  <rect x="40" y="80" width="120" height="80" rx="8" fill="#EDE9FE"/>
+  <rect x="180" y="80" width="120" height="80" rx="8" fill="#DDD6FE"/>
+  <rect x="320" y="80" width="120" height="80" rx="8" fill="#C4B5FD"/>
+  <rect x="460" y="80" width="120" height="80" rx="8" fill="#A78BFA"/>
+  
+  <!-- Charts Area -->
+  <rect x="40" y="180" width="260" height="150" rx="8" fill="#F3F4F6"/>
+  <rect x="320" y="180" width="260" height="150" rx="8" fill="#F3F4F6"/>
+  
+  <!-- Chart Lines -->
+  <polyline points="60,250 100,230 140,240 180,220 220,200 260,190" stroke="#7C3AED" stroke-width="3" fill="none"/>
+  <polyline points="340,280 380,260 420,270 460,250 500,230 540,220" stroke="#059669" stroke-width="3" fill="none"/>
+  
+  <text x="300" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#6B7280">${description}</text>
+</svg>`
+}
+
+function createElderAssistMockup(color, description) {
+  return `
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#F0F9FF"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="600" height="80" fill="#0EA5E9" opacity="0.1"/>
+  <rect x="40" y="25" width="180" height="20" rx="4" fill="#0EA5E9" opacity="0.8"/>
+  <text x="50" y="40" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Elder Assistant AI</text>
+  
+  <!-- Voice Interface -->
+  <circle cx="300" cy="180" r="60" fill="#0EA5E9" opacity="0.2"/>
+  <circle cx="300" cy="180" r="40" fill="#0EA5E9" opacity="0.4"/>
+  <circle cx="300" cy="180" r="20" fill="#0EA5E9" opacity="0.8"/>
+  
+  <!-- Microphone Icon -->
+  <rect x="290" y="165" width="20" height="30" rx="10" fill="#0EA5E9"/>
+  <rect x="285" y="200" width="30" height="8" rx="4" fill="#0EA5E9"/>
+  <rect x="297" y="208" width="6" height="15" fill="#0EA5E9"/>
+  
+  <!-- Status Cards -->
+  <rect x="40" y="270" width="150" height="60" rx="8" fill="#DBEAFE"/>
+  <rect x="220" y="270" width="150" height="60" rx="8" fill="#DCFCE7"/>
+  <rect x="400" y="270" width="150" height="60" rx="8" fill="#FEF3C7"/>
+  
+  <!-- Status Icons -->
+  <circle cx="70" cy="290" r="8" fill="#3B82F6"/>
+  <circle cx="250" cy="290" r="8" fill="#22C55E"/>
+  <circle cx="430" cy="290" r="8" fill="#F59E0B"/>
+  
+  <text x="300" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#6B7280">${description}</text>
+</svg>`
+}
+
+function createDefaultMockup(projectName, color, description) {
   return `
 <svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="600" height="400" fill="#F9FAFB"/>
@@ -157,20 +295,10 @@ function createProjectImage(projectName, color, description) {
   <rect x="40" y="60" width="200" height="16" rx="8" fill="${color}" opacity="0.3"/>
   <rect x="40" y="85" width="120" height="12" rx="6" fill="${color}" opacity="0.2"/>
   
-  <!-- Navigation -->
-  <rect x="40" y="140" width="80" height="8" rx="4" fill="#D1D5DB"/>
-  <rect x="140" y="140" width="80" height="8" rx="4" fill="#D1D5DB"/>
-  <rect x="240" y="140" width="80" height="8" rx="4" fill="${color}" opacity="0.6"/>
-  
   <!-- Content Cards -->
   <rect x="40" y="170" width="160" height="100" rx="8" fill="#F3F4F6"/>
   <rect x="220" y="170" width="160" height="100" rx="8" fill="#F3F4F6"/>
   <rect x="400" y="170" width="160" height="100" rx="8" fill="${color}" opacity="0.1"/>
-  
-  <!-- Card Content -->
-  <rect x="50" y="180" width="100" height="8" rx="4" fill="#9CA3AF"/>
-  <rect x="50" y="195" width="80" height="6" rx="3" fill="#D1D5DB"/>
-  <rect x="50" y="210" width="120" height="6" rx="3" fill="#D1D5DB"/>
   
   <!-- Footer -->
   <rect x="40" y="340" width="520" height="40" rx="8" fill="${color}" opacity="0.05"/>
