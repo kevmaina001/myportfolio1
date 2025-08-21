@@ -1,0 +1,28 @@
+
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#111827"/>
+  
+  <!-- Background Pattern -->
+  <circle cx="100" cy="100" r="40" fill="#3B82F6" opacity="0.1"/>
+  <circle cx="1100" cy="530" r="60" fill="#8B5CF6" opacity="0.1"/>
+  <circle cx="200" cy="500" r="30" fill="#10B981" opacity="0.1"/>
+  
+  <!-- Main Content -->
+  <text x="600" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white">Kelvin Maina</text>
+  <text x="600" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#9CA3AF">Software Engineer</text>
+  <text x="600" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#6B7280">Building fast, reliable web apps with Vue, TypeScript & Golang</text>
+  
+  <!-- Location -->
+  <text x="600" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#4B5563">📍 Nairobi, Kenya</text>
+  
+  <!-- Logo -->
+  <rect x="550" y="480" width="100" height="40" rx="8" fill="url(#logoGradient)"/>
+  <text x="600" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">KM</text>
+  
+  <defs>
+    <linearGradient id="logoGradient" x1="550" y1="480" x2="650" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+</svg>
