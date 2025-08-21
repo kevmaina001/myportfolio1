@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelvin Maina - Software Engineer | Vue, TypeScript, Golang Developer</title>
+  <meta name="description" content="Software Engineer building fast, reliable web apps with Vue/Nuxt, TypeScript, and Golang. Based in Nairobi, Kenya. Clean architecture, DX, and measurable outcomes.">
+  <meta name="keywords" content="Software Engineer, Vue.js, Nuxt.js, TypeScript, Golang, PWA, Web Developer, Nairobi, Kenya">
+  <meta name="author" content="Kelvin Maina">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://kevmaina001.github.io/">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kevmaina001.github.io/">
+  <meta property="og:title" content="Kelvin Maina - Software Engineer">
+  <meta property="og:description" content="Software Engineer building fast, reliable web apps with Vue/Nuxt, TypeScript, and Golang.">
+  <meta property="og:image" content="https://kevmaina001.github.io/assets/img/social-preview.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://kevmaina001.github.io/">
+  <meta property="twitter:title" content="Kelvin Maina - Software Engineer">
+  <meta property="twitter:description" content="Software Engineer building fast, reliable web apps with Vue/Nuxt, TypeScript, and Golang.">
+  <meta property="twitter:image" content="https://kevmaina001.github.io/assets/img/social-preview.jpg">
+
+  <!-- Preload critical resources -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" as="style">
+  <link rel="preload" href="/assets/img/kev.jpg" as="image">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" href="/assets/icons/favicon.png">
+  
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#3b82f6">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kelvin Maina",
+    "jobTitle": "Software Engineer",
+    "description": "Software Engineer building fast, reliable web apps with Vue/Nuxt, TypeScript, and Golang.",
+    "url": "https://kevmaina001.github.io",
+    "sameAs": [
+      "https://github.com/kevmaina001",
+      "https://www.linkedin.com/in/kelvin-maina-460490241",
+      "https://twitter.com/kelvinmaina"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelance"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nairobi",
+      "@country": "Kenya"
+    }
+  }
+  </script>
+  
+  <link rel="stylesheet" href="/src/assets/css/styles.css">
+</head>
+<body class="antialiased overflow-x-hidden">
+  <!-- Skip to content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-700/50 transition-all duration-300" role="banner">
+    <nav class="container-max px-6 py-4 flex items-center justify-between" role="navigation" aria-label="Main navigation">
+      <div class="font-display font-bold text-xl text-gradient">KM</div>
+      
+      <div class="flex items-center gap-6">
+        <!-- Desktop Navigation -->
+        <ul class="hidden md:flex items-center gap-6" role="list">
+          <li><a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">About</a></li>
+          <li><a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a></li>
+          <li><a href="#experience" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Experience</a></li>
+          <li><a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Contact</a></li>
+        </ul>
+        
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="Toggle dark mode">
+          <svg id="sun-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/>
+          </svg>
+          <svg id="moon-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800" aria-label="Toggle mobile menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 hidden">
+        <nav class="container-max px-6 py-4">
+          <ul class="flex flex-col gap-4" role="list">
+            <li><a href="#about" class="block text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">About</a></li>
+            <li><a href="#projects" class="block text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Projects</a></li>
+            <li><a href="#experience" class="block text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Experience</a></li>
+            <li><a href="#contact" class="block text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center bg-mesh overflow-hidden">
+      <div class="container-max section-padding">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-8">
+            <div class="space-y-4">
+              <h1 class="hero-title font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                <span class="block opacity-0 translate-y-8" data-aos="hero-line">Hi, I'm</span>
+                <span class="block text-gradient opacity-0 translate-y-8" data-aos="hero-line" data-delay="200">Kelvin Maina</span>
+              </h1>
+              <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-lg opacity-0 translate-y-8" data-aos="hero-tagline" data-delay="400">
+                Software Engineer building fast, reliable web apps.
+              </p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 opacity-0 translate-y-8" data-aos="hero-ctas" data-delay="600">
+              <a href="#contact" class="btn-primary">
+                Contact Me
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </a>
+              <a href="/resume/kelvin-maina-resume.pdf" target="_blank" class="btn-secondary">
+                View Resume
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+              </a>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="flex items-center gap-6 opacity-0 translate-y-8" data-aos="hero-socials" data-delay="800">
+              <a href="https://github.com/kevmaina001" target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors" aria-label="GitHub">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/in/kelvin-maina-460490241" target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors" aria-label="LinkedIn">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+              <a href="https://twitter.com/kelvinmaina" target="_blank" rel="noopener noreferrer" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors" aria-label="Twitter">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                </svg>
+              </a>
+              <a href="mailto:hello@kelvinmaina.dev" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors" aria-label="Email">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Hero Image -->
+          <div class="relative lg:order-last opacity-0 scale-95" data-aos="hero-image" data-delay="400">
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-to-r from-accent-blue to-accent-violet rounded-2xl blur-2xl opacity-20 animate-pulse-glow"></div>
+              <img 
+                src="/assets/img/kev.jpg" 
+                alt="Kelvin Maina - Software Engineer"
+                class="relative w-full max-w-md mx-auto rounded-2xl shadow-2xl"
+                loading="eager"
+                width="400"
+                height="400"
+              >
+            </div>
+            
+            <!-- Floating Stats -->
+            <div class="absolute -right-4 top-1/4 card glass p-4 opacity-0" data-aos="stat-card" data-delay="1000">
+              <div class="text-2xl font-bold text-gradient">5+</div>
+              <div class="text-sm text-gray-600 dark:text-gray-300">Years Experience</div>
+            </div>
+            
+            <div class="absolute -left-4 bottom-1/4 card glass p-4 opacity-0" data-aos="stat-card" data-delay="1200">
+              <div class="text-2xl font-bold text-gradient">50+</div>
+              <div class="text-sm text-gray-600 dark:text-gray-300">Projects Built</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <svg class="w-6 h-6 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+      <div class="container-max">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">About Me</h2>
+          <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            I design and ship performant web apps with Vue/Nuxt, TypeScript, and Golang. I care about clean architecture, DX, and measurable outcomes.
+          </p>
+        </div>
+        
+        <div class="grid lg:grid-cols-3 gap-8 mb-16">
+          <div class="card card-hover text-center">
+            <div class="w-12 h-12 bg-gradient-to-r from-accent-blue to-accent-violet rounded-lg mx-auto mb-4 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-4m-5 0H3m2 0v-0.5C5 18.01 5.01 18 5.01 18h.99c.28 0 .52-.22.52-.5s-.24-.5-.52-.5h-.99c-.28 0-.52.22-.52.5V21m7-3V9"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-display font-semibold mb-2">Clean Architecture</h3>
+            <p class="text-gray-600 dark:text-gray-300">Building maintainable, scalable applications with solid principles and clean code practices.</p>
+          </div>
+          
+          <div class="card card-hover text-center">
+            <div class="w-12 h-12 bg-gradient-to-r from-accent-blue to-accent-violet rounded-lg mx-auto mb-4 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-display font-semibold mb-2">Performance</h3>
+            <p class="text-gray-600 dark:text-gray-300">Optimizing for speed, accessibility, and core web vitals to deliver exceptional user experiences.</p>
+          </div>
+          
+          <div class="card card-hover text-center">
+            <div class="w-12 h-12 bg-gradient-to-r from-accent-blue to-accent-violet rounded-lg mx-auto mb-4 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-display font-semibold mb-2">Developer Experience</h3>
+            <p class="text-gray-600 dark:text-gray-300">Creating intuitive tools, comprehensive docs, and streamlined workflows for better productivity.</p>
+          </div>
+        </div>
+        
+        <!-- Tech Stack -->
+        <div class="text-center">
+          <h3 class="text-2xl font-display font-semibold mb-8">Technologies I Work With</h3>
+          <div class="flex flex-wrap justify-center gap-4">
+            <span class="px-4 py-2 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm font-medium">Vue.js</span>
+            <span class="px-4 py-2 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm font-medium">Nuxt 3</span>
+            <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm font-medium">TypeScript</span>
+            <span class="px-4 py-2 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 rounded-full text-sm font-medium">Golang</span>
+            <span class="px-4 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full text-sm font-medium">Vite</span>
+            <span class="px-4 py-2 bg-teal-100 dark:bg-teal-900/30 text-teal-800 dark:text-teal-300 rounded-full text-sm font-medium">Tailwind CSS</span>
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300 rounded-full text-sm font-medium">Docker</span>
+            <span class="px-4 py-2 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-sm font-medium">PWAs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-gray-50/50 dark:bg-gray-800/50">
+      <div class="container-max">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">Featured Projects</h2>
+          <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            A selection of projects showcasing my expertise in building fast, reliable web applications.
+          </p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-12">
+          <!-- Project 1: Gatangu E-commerce -->
+          <article class="card card-hover">
+            <div class="mb-6">
+              <div class="project-carousel relative overflow-hidden rounded-lg mb-4" data-project="gatangu">
+                <div class="carousel-track flex transition-transform duration-300 ease-in-out">
+                  <img src="/assets/img/gatangu-1.svg" alt="Gatangu E-commerce Homepage" class="w-full h-64 object-cover flex-shrink-0">
+                  <img src="/assets/img/gatangu-2.svg" alt="Gatangu Product Catalog" class="w-full h-64 object-cover flex-shrink-0">
+                  <img src="/assets/img/gatangu-3.svg" alt="Gatangu Mobile PWA" class="w-full h-64 object-cover flex-shrink-0">
+                </div>
+                
+                <!-- Carousel Controls -->
+                <button class="carousel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 transition-all duration-200" aria-label="Previous image">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                  </svg>
+                </button>
+                <button class="carousel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 transition-all duration-200" aria-label="Next image">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </button>
+                
+                <!-- Carousel Indicators -->
+                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+                  <button class="carousel-dot w-2 h-2 rounded-full bg-white/60 hover:bg-white transition-all duration-200" data-slide="0"></button>
+                  <button class="carousel-dot w-2 h-2 rounded-full bg-white/60 hover:bg-white transition-all duration-200" data-slide="1"></button>
+                  <button class="carousel-dot w-2 h-2 rounded-full bg-white/60 hover:bg-white transition-all duration-200" data-slide="2"></button>
+                </div>
+              </div>
+              
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-2xl font-display font-bold">Gatangu E-commerce</h3>
+                <div class="flex gap-2">
+                  <a href="https://github.com/kevmaina001/gatangu" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors" aria-label="View source code">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                  </a>
+                  <button class="case-study-btn p-2 rounded-lg bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 hover:bg-primary-200 dark:hover:bg-primary-900/50 transition-colors" data-project="gatangu" aria-label="View case study">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                Progressive Web App for local farmers to sell produce with offline capabilities, payment integration, and real-time order management.
+              </p>
+              
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-xs font-medium">React</span>
+                <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-xs font-medium">Node.js</span>
+                <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-xs font-medium">PWA</span>
+                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full text-xs font-medium">MongoDB</span>
+              </div>
+              
+              <div class="text-sm text-gray-500 dark:text-gray-400">
+                Full Stack Developer • 2024
+              </div>
+            </div>
+          </article>
+          
+          <!-- Project 2: Elder Assistant -->
+          <article class="card card-hover">
+            <div class="mb-6">
+              <div class="project-carousel relative overflow-hidden rounded-lg mb-4" data-project="elderassist">
+                <div class="carousel-track flex transition-transform duration-300 ease-in-out">
+                  <img src="/assets/img/elderassist-1.svg" alt="Elder Assistant Voice Interface" class="w-full h-64 object-cover flex-shrink-0">
+                  <img src="/assets/img/elderassist-2.svg" alt="Elder Assistant Dashboard" class="w-full h-64 object-cover flex-shrink-0">
+                </div>
+                
+                <button class="carousel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 transition-all duration-200" aria-label="Previous image">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                  </svg>
+                </button>
+                <button class="carousel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 transition-all duration-200" aria-label="Next image">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </button>
+                
+                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+                  <button class="carousel-dot w-2 h-2 rounded-full bg-white/60 hover:bg-white transition-all duration-200" data-slide="0"></button>
+                  <button class="carousel-dot w-2 h-2 rounded-full bg-white/60 hover:bg-white transition-all duration-200" data-slide="1"></button>
+                </div>
+              </div>
+              
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-2xl font-display font-bold">Elder Assistant</h3>
+                <div class="flex gap-2">
+                  <a href="https://github.com/kevmaina001/elder-assistant" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors" aria-label="View source code">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                  </a>
+                  <button class="case-study-btn p-2 rounded-lg bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 hover:bg-primary-200 dark:hover:bg-primary-900/50 transition-colors" data-project="elderassist" aria-label="View case study">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                AI-powered voice assistant for elderly care with face authentication, medication reminders, and emergency contact system.
+              </p>
+              
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 rounded-full text-xs font-medium">Python</span>
+                <span class="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300 rounded-full text-xs font-medium">Flask</span>
+                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-xs font-medium">Vosk AI</span>
+                <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-xs font-medium">OpenCV</span>
+              </div>
+              
+              <div class="text-sm text-gray-500 dark:text-gray-400">
+                AI Engineer & Full Stack Developer • 2024
+              </div>
+            </div>
+          </article>
+          
+          <!-- Project 3: Church Finance -->
+          <article class="card card-hover">
+            <div class="mb-6">
+              <div class="project-carousel relative overflow-hidden rounded-lg mb-4" data-project="churchfinance">
+                <div class="carousel-track flex transition-transform duration-300 ease-in-out">
+                  <img src="/assets/img/churchfinance-1.svg" alt="Church Finance Dashboard" class="w-full h-64 object-cover flex-shrink-0">
+                  <img src="/assets/img/churchfinance-2.svg" alt="Church Finance Reports" class="w-full h-64 object-cover flex-shrink-0">
+                </div>
+                
+                <button class="carousel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 transition-all duration-200" aria-label="Previous image">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                  </svg>
+                </button>
+                <button class="carousel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 transition-all duration-200" aria-label="Next image">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </button>
+                
+                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+                  <button class="carousel-dot w-2 h-2 rounded-full bg-white/60 hover:bg-white transition-all duration-200" data-slide="0"></button>
+                  <button class="carousel-dot w-2 h-2 rounded-full bg-white/60 hover:bg-white transition-all duration-200" data-slide="1"></button>
+                </div>
+              </div>
+              
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-2xl font-display font-bold">Church Finance System</h3>
+                <div class="flex gap-2">
+                  <a href="https://github.com/kevmaina001/church-finance" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors" aria-label="View source code">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                  </a>
+                  <button class="case-study-btn p-2 rounded-lg bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 hover:bg-primary-200 dark:hover:bg-primary-900/50 transition-colors" data-project="churchfinance" aria-label="View case study">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                Comprehensive financial management system for religious organizations with multi-tenant architecture and detailed reporting.
+              </p>
+              
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-xs font-medium">React</span>
+                <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-xs font-medium">Node.js</span>
+                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full text-xs font-medium">MongoDB</span>
+                <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-xs font-medium">Chart.js</span>
+              </div>
+              
+              <div class="text-sm text-gray-500 dark:text-gray-400">
+                Lead Full Stack Developer • 2024
+              </div>
+            </div>
+          </article>
+          
+          <!-- More Projects Link -->
+          <div class="lg:col-span-2 text-center">
+            <a href="https://github.com/kevmaina001" target="_blank" rel="noopener noreferrer" class="btn-secondary inline-flex items-center">
+              View More Projects
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-padding">
+      <div class="container-max">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">Experience</h2>
+          <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            A timeline of my professional journey building innovative web solutions.
+          </p>
+        </div>
+        
+        <div class="relative">
+          <!-- Timeline Line -->
+          <div class="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent-blue to-accent-violet"></div>
+          
+          <div class="space-y-12">
+            <!-- Experience 1 -->
+            <div class="relative flex items-center md:justify-center">
+              <div class="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 bg-gradient-to-r from-accent-blue to-accent-violet rounded-full border-4 border-white dark:border-gray-900 z-10"></div>
+              <div class="ml-12 md:ml-0 md:w-1/2 md:pr-12 md:text-right">
+                <div class="card">
+                  <div class="mb-4">
+                    <h3 class="text-xl font-display font-bold">Senior Frontend Developer</h3>
+                    <div class="text-primary-600 dark:text-primary-400 font-medium">Bandabets</div>
+                    <div class="text-sm text-gray-500 dark:text-gray-400">2023 - Present</div>
+                  </div>
+                  <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                    <li>• Improved core web vitals by 42% through code splitting and lazy loading</li>
+                    <li>• Implemented country-based routing with geolocation and CDN optimization</li>
+                    <li>• Enhanced betslip UX leading to 23% increase in conversion rates</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Experience 2 -->
+            <div class="relative flex items-center md:justify-center">
+              <div class="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 bg-gradient-to-r from-accent-blue to-accent-violet rounded-full border-4 border-white dark:border-gray-900 z-10"></div>
+              <div class="ml-12 md:ml-0 md:w-1/2 md:pl-12">
+                <div class="card">
+                  <div class="mb-4">
+                    <h3 class="text-xl font-display font-bold">Full Stack Developer</h3>
+                    <div class="text-primary-600 dark:text-primary-400 font-medium">Freelance</div>
+                    <div class="text-sm text-gray-500 dark:text-gray-400">2021 - 2023</div>
+                  </div>
+                  <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                    <li>• Built 15+ PWAs and web applications for various clients</li>
+                    <li>• Specialized in Vue/Nuxt ecosystem with TypeScript integration</li>
+                    <li>• Delivered projects with average 95+ Lighthouse performance scores</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Experience 3 -->
+            <div class="relative flex items-center md:justify-center">
+              <div class="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 bg-gradient-to-r from-accent-blue to-accent-violet rounded-full border-4 border-white dark:border-gray-900 z-10"></div>
+              <div class="ml-12 md:ml-0 md:w-1/2 md:pr-12 md:text-right">
+                <div class="card">
+                  <div class="mb-4">
+                    <h3 class="text-xl font-display font-bold">Frontend Developer</h3>
+                    <div class="text-primary-600 dark:text-primary-400 font-medium">TechStart Kenya</div>
+                    <div class="text-sm text-gray-500 dark:text-gray-400">2020 - 2021</div>
+                  </div>
+                  <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                    <li>• Developed responsive web interfaces using Vue.js and modern CSS</li>
+                    <li>• Collaborated with design team to implement pixel-perfect UIs</li>
+                    <li>• Mentored junior developers on best practices and code reviews</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-gray-50/50 dark:bg-gray-800/50">
+      <div class="container-max">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">Let's Work Together</h2>
+          <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Ready to build something amazing? I'm available for freelance projects and full-time opportunities.
+          </p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          <!-- Contact Form -->
+          <div class="card">
+            <h3 class="text-2xl font-display font-bold mb-6">Send a Message</h3>
+            <form id="contact-form" class="space-y-6">
+              <div>
+                <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  required 
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                  placeholder="Your name"
+                >
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required 
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                  placeholder="your.email@example.com"
+                >
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  required 
+                  rows="5" 
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors resize-none"
+                  placeholder="Tell me about your project..."
+                ></textarea>
+              </div>
+              <button type="submit" class="btn-primary w-full">
+                Send Message
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+          
+          <!-- Contact Info -->
+          <div class="space-y-8">
+            <div class="card">
+              <h3 class="text-2xl font-display font-bold mb-6">Get in Touch</h3>
+              <div class="space-y-6">
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 bg-gradient-to-r from-accent-blue to-accent-violet rounded-lg flex items-center justify-center text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="font-medium">Email</div>
+                    <a href="mailto:hello@kelvinmaina.dev" class="text-primary-600 dark:text-primary-400 hover:underline">hello@kelvinmaina.dev</a>
+                  </div>
+                </div>
+                
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 bg-gradient-to-r from-accent-blue to-accent-violet rounded-lg flex items-center justify-center text-white">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.108"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="font-medium">WhatsApp</div>
+                    <a href="https://wa.me/254712345678" target="_blank" rel="noopener noreferrer" class="text-primary-600 dark:text-primary-400 hover:underline">+254 712 345 678</a>
+                  </div>
+                </div>
+                
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 bg-gradient-to-r from-accent-blue to-accent-violet rounded-lg flex items-center justify-center text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="font-medium">Location</div>
+                    <div class="text-gray-600 dark:text-gray-300">Nairobi, Kenya</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Response Time -->
+            <div class="card text-center">
+              <div class="w-16 h-16 bg-gradient-to-r from-accent-blue to-accent-violet rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-display font-bold mb-2">Quick Response</h3>
+              <p class="text-gray-600 dark:text-gray-300">I typically respond to messages within 24 hours during weekdays.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="section-padding bg-gray-900 text-gray-300">
+    <div class="container-max">
+      <div class="text-center">
+        <div class="font-display font-bold text-2xl text-gradient mb-4">Kelvin Maina</div>
+        <p class="mb-6">Building the future, one line of code at a time.</p>
+        
+        <!-- Social Links -->
+        <div class="flex justify-center gap-6 mb-8">
+          <a href="https://github.com/kevmaina001" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="GitHub">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/kelvin-maina-460490241" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="LinkedIn">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+          <a href="https://twitter.com/kelvinmaina" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="Twitter">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+          </a>
+          <a href="mailto:hello@kelvinmaina.dev" class="hover:text-white transition-colors" aria-label="Email">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </a>
+        </div>
+        
+        <div class="text-sm text-gray-400">
+          © 2024 Kelvin Maina. Built with ❤️ using Vite, TypeScript & Tailwind CSS.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Case Study Modal -->
+  <div id="case-study-modal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-modal="true" role="dialog">
+    <div class="flex items-center justify-center min-h-screen px-4 py-8">
+      <div class="fixed inset-0 bg-gray-900/80 backdrop-blur-sm transition-opacity" aria-hidden="true"></div>
+      
+      <div class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <div class="sticky top-0 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 px-6 py-4 flex items-center justify-between rounded-t-2xl">
+          <h3 id="case-study-title" class="text-2xl font-display font-bold">Case Study</h3>
+          <button id="close-modal" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors" aria-label="Close modal">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+        
+        <div id="case-study-content" class="p-6">
+          <!-- Content will be dynamically inserted -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="/src/ts/main.ts"></script>
+</body>
+</html>
