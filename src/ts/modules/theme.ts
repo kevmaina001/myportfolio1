@@ -38,10 +38,6 @@ class ThemeManager {
     return stored === 'light' || stored === 'dark' ? stored : null
   }
 
-  private getSystemTheme(): 'light' | 'dark' {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-  }
-
   private applyTheme(theme: 'light' | 'dark') {
     const html = document.documentElement
     
