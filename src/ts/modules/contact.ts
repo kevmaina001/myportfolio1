@@ -240,7 +240,7 @@ class ContactForm {
   }
 }
 
-// Copy email to clipboard functionality n
+// Copy email to clipboard functionality nuuu
 document.addEventListener('DOMContentLoaded', () => {
   const emailLinks = document.querySelectorAll('a[href^="mailto:"]')
   
