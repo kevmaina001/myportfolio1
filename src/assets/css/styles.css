@@ -178,6 +178,13 @@
   .floating {
     animation: float 6s ease-in-out infinite;
   }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
   
   @keyframes float {
     0%, 100% { transform: translateY(0px) rotate(0deg); }
@@ -231,6 +238,10 @@
   
   /* Mobile-specific utilities */
   @media (max-width: 768px) {
+    main {
+      padding-top: 80px;
+    }
+    
     .section-padding {
       @apply py-16 px-4;
     }

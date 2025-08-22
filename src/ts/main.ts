@@ -5,6 +5,7 @@ import './modules/navigation'
 import './modules/carousel'
 import './modules/contact'
 import './modules/modal'
+import './modules/github'
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger)
