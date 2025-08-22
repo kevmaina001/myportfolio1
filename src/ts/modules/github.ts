@@ -24,14 +24,17 @@ class GitHubRepositories {
   private readonly apiUrl: string = 'https://api.github.com'
   private repos: GitHubRepo[] = []
   private loading: boolean = false
+  private modal: HTMLElement | null = null
+  private modalOverlay: HTMLElement | null = null
+  private isOpen: boolean = false
   
   constructor() {
     this.init()
   }
 
   private async init() {
-    await this.loadRepositories()
-    this.renderRepositories()
+    this.modal = document.getElementById('repositories-modal')
+    this.modalOverlay = this.modal?.querySelector('[aria-hidden="true"]') || null
     this.setupEventListeners()
   }
 
@@ -274,12 +277,95 @@ class GitHubRepositories {
   }
 
   private setupEventListeners(): void {
-    // Add refresh button functionality
+    // View More Projects button
+    const viewMoreProjectsBtn = document.getElementById('view-more-projects-btn')
+    if (viewMoreProjectsBtn) {
+      viewMoreProjectsBtn.addEventListener('click', () => {
+        this.openModal()
+      })
+    }
+
+    // Close modal button
+    const closeBtn = document.getElementById('close-repos-modal')
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        this.closeModal()
+      })
+    }
+
+    // Close on overlay click
+    this.modalOverlay?.addEventListener('click', () => {
+      this.closeModal()
+    })
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && this.isOpen) {
+        this.closeModal()
+      }
+    })
+
+    // Refresh button functionality
     const refreshBtn = document.getElementById('refresh-repos')
     if (refreshBtn) {
       refreshBtn.addEventListener('click', async () => {
         await this.loadRepositories()
         this.renderRepositories()
+      })
+    }
+  }
+
+  private async openModal(): Promise<void> {
+    if (!this.modal) return
+
+    // Load repositories if not already loaded
+    if (this.repos.length === 0 && !this.loading) {
+      await this.loadRepositories()
+    }
+    
+    this.renderRepositories()
+
+    // Show modal
+    this.modal.classList.remove('hidden')
+    document.body.style.overflow = 'hidden'
+    this.isOpen = true
+
+    // Focus management
+    const closeBtn = document.getElementById('close-repos-modal')
+    closeBtn?.focus()
+
+    // Animate in (optional)
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      this.animateIn()
+    }
+  }
+
+  private closeModal(): void {
+    if (!this.modal) return
+
+    this.modal.classList.add('hidden')
+    document.body.style.overflow = ''
+    this.isOpen = false
+
+    // Return focus to trigger button
+    const viewMoreProjectsBtn = document.getElementById('view-more-projects-btn')
+    viewMoreProjectsBtn?.focus()
+  }
+
+  private animateIn(): void {
+    if (!this.modal) return
+    
+    const modalContent = this.modal.querySelector('.relative') as HTMLElement
+    if (modalContent) {
+      // Set initial state
+      modalContent.style.transform = 'scale(0.95)'
+      modalContent.style.opacity = '0'
+      
+      // Animate in
+      requestAnimationFrame(() => {
+        modalContent.style.transition = 'all 0.2s ease-out'
+        modalContent.style.transform = 'scale(1)'
+        modalContent.style.opacity = '1'
       })
     }
   }
