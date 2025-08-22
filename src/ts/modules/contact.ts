@@ -167,7 +167,7 @@ class ContactForm {
       const body = encodeURIComponent(
         `Name: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
       )
-      const mailtoLink = `mailto:hello@kelvinmaina.dev?subject=${subject}&body=${body}`
+      const mailtoLink = `mailto:kmaina102@gmail.com?subject=${subject}&body=${body}`
 
       // You can replace this with your preferred form handling service
       // For now, we'll use mailto as a fallback

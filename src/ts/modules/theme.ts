@@ -1,5 +1,5 @@
 class ThemeManager {
-  private theme: 'light' | 'dark' = 'dark'
+  private theme: 'light' | 'dark' = 'light'
   private toggleButton: HTMLElement | null = null
   private sunIcon: HTMLElement | null = null
   private moonIcon: HTMLElement | null = null
@@ -13,8 +13,8 @@ class ThemeManager {
     this.sunIcon = document.getElementById('sun-icon')
     this.moonIcon = document.getElementById('moon-icon')
 
-    // Get stored theme or default to dark mode
-    this.theme = this.getStoredTheme() || 'dark'
+    // Get stored theme or default to light mode
+    this.theme = this.getStoredTheme() || 'light'
     this.applyTheme(this.theme)
     this.updateIcons()
 
