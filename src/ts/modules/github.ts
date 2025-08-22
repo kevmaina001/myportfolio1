@@ -18,10 +18,6 @@ interface GitHubRepo {
   topics: string[]
 }
 
-interface GitHubError {
-  message: string
-  status: number
-}
 
 class GitHubRepositories {
   private readonly username: string = 'kevmaina001'
@@ -72,7 +68,6 @@ class GitHubRepositories {
       
       // For private repositories, you would need authentication
       // This is a placeholder for where private repo fetching would happen
-      // const privateRepos = await this.fetchPrivateRepositories()
       
       // Filter out forks and archived repos, sort by last updated
       this.repos = publicRepos
@@ -87,26 +82,6 @@ class GitHubRepositories {
     }
   }
 
-  private async fetchPrivateRepositories(): Promise<GitHubRepo[]> {
-    // This method would require proper authentication
-    // For security reasons, private repos should be handled server-side
-    // or with proper OAuth flow, not with hardcoded tokens in frontend
-    
-    // Placeholder implementation
-    try {
-      const response = await this.fetchWithAuth(
-        `${this.apiUrl}/user/repos?visibility=private&sort=updated&per_page=100`
-      )
-      
-      if (response.ok) {
-        return await response.json()
-      }
-    } catch (error) {
-      console.warn('Could not fetch private repositories:', error)
-    }
-    
-    return []
-  }
 
   private renderRepositories(): void {
     const container = document.getElementById('github-repositories')
