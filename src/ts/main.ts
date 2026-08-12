@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function initAnimations() {
   // Hero section staged reveal
+  const heroEyebrow = document.querySelector('[data-aos="hero-eyebrow"]')
   const heroLines = document.querySelectorAll('[data-aos="hero-line"]')
   const heroTagline = document.querySelector('[data-aos="hero-tagline"]')
   const heroCtas = document.querySelector('[data-aos="hero-ctas"]')
@@ -26,17 +27,17 @@ function initAnimations() {
   const statCards = document.querySelectorAll('[data-aos="stat-card"]')
 
   // Set initial states with GPU acceleration hints
-  gsap.set([heroLines, heroTagline, heroCtas, heroSocials], { 
-    opacity: 0, 
+  gsap.set([heroEyebrow, heroLines, heroTagline, heroCtas, heroSocials], {
+    opacity: 0,
     y: 30,
     force3D: true
   })
-  gsap.set(heroImage, { 
-    opacity: 0, 
+  gsap.set(heroImage, {
+    opacity: 0,
     scale: 0.9,
     force3D: true
   })
-  gsap.set(statCards, { 
+  gsap.set(statCards, {
     opacity: 0, 
     scale: 0.8,
     force3D: true
@@ -44,14 +45,20 @@ function initAnimations() {
 
   // Create optimized timeline with shorter durations
   const tl = gsap.timeline({ delay: 0.3 })
-  
-  tl.to(heroLines[0], { 
-    duration: 0.5, 
-    opacity: 1, 
-    y: 0, 
-    ease: "power2.out" 
+
+  tl.to(heroEyebrow, {
+    duration: 0.4,
+    opacity: 1,
+    y: 0,
+    ease: "power2.out"
   })
-  .to(heroLines[1], { 
+  .to(heroLines[0], {
+    duration: 0.5,
+    opacity: 1,
+    y: 0,
+    ease: "power2.out"
+  }, "-=0.2")
+  .to(heroLines[1], {
     duration: 0.5, 
     opacity: 1, 
     y: 0, 
@@ -69,19 +76,19 @@ function initAnimations() {
     y: 0, 
     ease: "power2.out" 
   }, "-=0.3")
-  .to(heroSocials, { 
-    duration: 0.5, 
-    opacity: 1, 
-    y: 0, 
-    ease: "power2.out" 
+  .to(heroSocials, {
+    duration: 0.5,
+    opacity: 1,
+    y: 0,
+    ease: "power2.out"
   }, "-=0.3")
-  .to(heroImage, { 
-    duration: 0.6, 
-    opacity: 1, 
-    scale: 1, 
-    ease: "power2.out" 
+  .to(heroImage, {
+    duration: 0.6,
+    opacity: 1,
+    scale: 1,
+    ease: "power2.out"
   }, "-=0.4")
-  .to(statCards, { 
+  .to(statCards, {
     duration: 0.4, 
     opacity: 1, 
     scale: 1, 
@@ -147,8 +154,8 @@ function initScrollTriggers() {
     })
   }
 
-  // Experience timeline animation - optimized
-  const timelineItems = document.querySelectorAll('#experience .relative')
+  // Founder timeline animation - optimized
+  const timelineItems = document.querySelectorAll('#founder .relative')
   timelineItems.forEach((item, index) => {
     const card = item.querySelector('.card')
     if (card) {

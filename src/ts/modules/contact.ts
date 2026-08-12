@@ -107,7 +107,7 @@ class ContactForm {
 
   private showFieldError(field: HTMLInputElement | HTMLTextAreaElement, message: string) {
     field.classList.add('border-red-500', 'dark:border-red-400')
-    field.classList.remove('border-gray-300', 'dark:border-gray-600')
+    field.classList.remove('border-slate-300', 'dark:border-white/10')
     
     // Remove existing error message
     const existingError = field.parentElement?.querySelector('.field-error')
@@ -124,7 +124,7 @@ class ContactForm {
 
   private clearFieldError(field: HTMLInputElement | HTMLTextAreaElement) {
     field.classList.remove('border-red-500', 'dark:border-red-400')
-    field.classList.add('border-gray-300', 'dark:border-gray-600')
+    field.classList.add('border-slate-300', 'dark:border-white/10')
     
     const errorDiv = field.parentElement?.querySelector('.field-error')
     if (errorDiv) {
@@ -163,7 +163,7 @@ class ContactForm {
 
     try {
       // Create mailto link as fallback
-      const subject = encodeURIComponent(`Portfolio Contact from ${data.name}`)
+      const subject = encodeURIComponent(`Jengara Technologies inquiry from ${data.name}`)
       const body = encodeURIComponent(
         `Name: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
       )

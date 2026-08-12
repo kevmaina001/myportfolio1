@@ -19,93 +19,21 @@ class CaseStudyModal {
   private isOpen: boolean = false
 
   private caseStudyData: CaseStudyData = {
-    gatangu: {
-      title: 'Gatangu - E-commerce PWA Platform',
-      problem: 'Local farmers needed an accessible platform to sell produce directly to customers with offline capabilities and seamless payment integration.',
+    'isp-billing': {
+      title: 'ISP Billing System',
+      problem: 'Small and growing internet service providers often manage subscribers, invoices, payments, and support status across disconnected tools. The system brings those operations into one focused workflow so teams can see customer state, billing activity, and follow-up work faster.',
       approach: [
-        'Built progressive web app with offline-first approach using service workers',
-        'Integrated Paystack payment gateway for secure transactions',
-        'Implemented real-time order management and WhatsApp integration',
-        'Created responsive design optimized for mobile users in rural areas',
-        'Added image optimization and lazy loading for faster load times',
-        'Built admin panel for inventory and order management'
+        'Designed around the core ISP workflow: packages, subscribers, invoices, payments, and account status.',
+        'Built dashboard views that surface billing activity, pending work, and customer records without requiring spreadsheet reconciliation.',
+        'Kept the product modular so payment and network integrations can be added as deployment needs become clearer.'
       ],
       results: [
-        'Offline functionality enabling sales even with poor connectivity',
-        'Mobile-first design improving user experience by 60%',
-        'WhatsApp integration increasing customer engagement by 45%',
-        'Fast loading times under 3 seconds on slow networks',
-        'Successful payment processing with 99.5% uptime'
+        'Centralized subscriber and billing operations into a single product experience.',
+        'Created a foundation for payment tracking, operational reporting, and future ISP-specific integrations.'
       ],
-      technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'PWA', 'Paystack API'],
-      timeline: '4 months',
-      role: 'Full Stack Developer'
-    },
-    khisa: {
-      title: 'Khisa Foundation - Community Impact Platform',
-      problem: 'The Khisa Foundation needed a modern web presence to showcase their community programs and increase engagement for their pad drives, mentorship, and digital literacy initiatives.',
-      approach: [
-        'Built responsive website with Next.js for optimal performance',
-        'Implemented modern design focused on social impact storytelling',
-        'Created interactive program showcases for pad drives and mentorship',
-        'Added donation integration and volunteer sign-up functionality',
-        'Optimized for accessibility and mobile-first user experience',
-        'Integrated social media and community engagement features'
-      ],
-      results: [
-        'Modern web presence increasing community awareness by 40%',
-        'Mobile-optimized design improving engagement on all devices',
-        'Clear program information increasing volunteer sign-ups',
-        'Professional platform building trust with donors and partners',
-        'Accessible design ensuring inclusivity for all community members'
-      ],
-      technologies: ['React', 'Next.js', 'Tailwind CSS', 'Vercel', 'TypeScript'],
-      timeline: '3 months',
-      role: 'Frontend Developer & Social Impact'
-    },
-    churchfinance: {
-      title: 'Ackamune Fund Manager - Financial Dashboard',
-      problem: 'Religious organizations needed a comprehensive financial management system for tracking income, expenses, and generating detailed reports with real-time analytics.',
-      approach: [
-        'Designed RESTful API with role-based access control',
-        'Implemented double-entry bookkeeping system with audit trails',
-        'Built comprehensive reporting dashboard with data visualizations',
-        'Created multi-tenant architecture supporting multiple organizations',
-        'Added email notifications for financial alerts and approvals',
-        'Developed responsive frontend with real-time updates'
-      ],
-      results: [
-        'Automated financial reporting saving 20+ hours per month',
-        'Multi-tenant system serving multiple church organizations',
-        'Audit trail ensuring complete financial transparency',
-        'Real-time dashboard providing instant financial insights',
-        'Role-based permissions ensuring data security and compliance'
-      ],
-      technologies: ['Node.js', 'React', 'MongoDB', 'Express', 'JWT', 'Chart.js'],
-      timeline: '6 months',
-      role: 'Lead Full Stack Developer'
-    },
-    joygardens: {
-      title: 'Joy Gardens School - Educational Excellence Platform',
-      problem: 'Joy Gardens School needed a modern, engaging website to showcase their academic programs, connect with parents, and provide interactive learning resources for students.',
-      approach: [
-        'Designed responsive educational website with Next.js and React',
-        'Created interactive academic program showcases and course catalogs',
-        'Built student portal with assignment tracking and grade access',
-        'Implemented parent-teacher communication features',
-        'Added event calendar and school news management system',
-        'Optimized for performance with fast loading on all devices'
-      ],
-      results: [
-        'Modern educational platform improving school-parent communication',
-        'Student portal increasing academic engagement and organization',
-        'Mobile-responsive design serving parents and students everywhere',
-        'Fast loading times ensuring accessibility across different connections',
-        'Professional online presence attracting new student enrollments'
-      ],
-      technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel'],
-      timeline: '4 months',
-      role: 'Frontend Developer & UI/UX Design'
+      technologies: ['TypeScript', 'Vue/Nuxt', 'Tailwind CSS', 'Billing workflows'],
+      timeline: 'Product build',
+      role: 'Lead Developer'
     }
   }
 
@@ -195,20 +123,20 @@ class CaseStudyModal {
     this.modalContent.innerHTML = `
       <div class="space-y-8">
         <!-- Overview -->
-        <div class="grid md:grid-cols-3 gap-6 p-6 bg-gray-50 dark:bg-gray-900/50 rounded-xl">
+        <div class="grid md:grid-cols-3 gap-6 p-6 bg-slate-50 dark:bg-white/[0.04] rounded-lg">
           <div>
             <h4 class="font-display font-semibold text-gray-900 dark:text-gray-100 mb-2">Role</h4>
-            <p class="text-gray-600 dark:text-gray-300">${data.role}</p>
+            <p class="text-slate-600 dark:text-slate-300">${data.role}</p>
           </div>
           <div>
             <h4 class="font-display font-semibold text-gray-900 dark:text-gray-100 mb-2">Timeline</h4>
-            <p class="text-gray-600 dark:text-gray-300">${data.timeline}</p>
+            <p class="text-slate-600 dark:text-slate-300">${data.timeline}</p>
           </div>
           <div>
             <h4 class="font-display font-semibold text-gray-900 dark:text-gray-100 mb-2">Technologies</h4>
             <div class="flex flex-wrap gap-1">
               ${data.technologies.map(tech => 
-                `<span class="px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded text-xs">${tech}</span>`
+                `<span class="px-2 py-1 bg-teal-100 dark:bg-teal-400/10 text-teal-700 dark:text-teal-300 rounded text-xs">${tech}</span>`
               ).join('')}
             </div>
           </div>
@@ -217,7 +145,7 @@ class CaseStudyModal {
         <!-- Problem -->
         <section>
           <h3 class="text-2xl font-display font-bold text-gray-900 dark:text-gray-100 mb-4">The Challenge</h3>
-          <p class="text-gray-600 dark:text-gray-300 leading-relaxed">${data.problem}</p>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed">${data.problem}</p>
         </section>
 
         <!-- Approach -->
@@ -226,8 +154,8 @@ class CaseStudyModal {
           <ul class="space-y-3">
             ${data.approach.map(item => 
               `<li class="flex items-start gap-3">
-                <div class="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
-                <span class="text-gray-600 dark:text-gray-300">${item}</span>
+                <div class="w-2 h-2 bg-teal-500 rounded-full mt-2 flex-shrink-0"></div>
+                <span class="text-slate-600 dark:text-slate-300">${item}</span>
               </li>`
             ).join('')}
           </ul>

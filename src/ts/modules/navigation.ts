@@ -131,11 +131,11 @@ class Navigation {
       const id = href?.substring(1) // Remove #
       
       if (id === activeId) {
-        link.classList.add('text-primary-600', 'dark:text-primary-400')
-        link.classList.remove('text-gray-600', 'dark:text-gray-300')
+        link.classList.add('text-teal-700', 'dark:text-teal-300')
+        link.classList.remove('text-slate-600', 'dark:text-slate-300')
       } else {
-        link.classList.remove('text-primary-600', 'dark:text-primary-400')
-        link.classList.add('text-gray-600', 'dark:text-gray-300')
+        link.classList.remove('text-teal-700', 'dark:text-teal-300')
+        link.classList.add('text-slate-600', 'dark:text-slate-300')
       }
     })
   }

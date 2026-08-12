@@ -1,11 +1,11 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
-  <path d="M8 12L16 20L24 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M12 8L20 16L12 24" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   <defs>
-    <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#3B82F6"/>
-      <stop offset="1" stop-color="#8B5CF6"/>
+    <linearGradient id="markGradient" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F766E"/>
+      <stop offset="1" stop-color="#0F172A"/>
     </linearGradient>
   </defs>
+  <rect x="1" y="1" width="30" height="30" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+  <path d="M10.5 7.5H22V11H16.6V19.4C16.6 23.2 14.15 25.5 10.5 25.5C8.85 25.5 7.45 25.1 6.25 24.3L7.8 21.15C8.55 21.6 9.35 21.85 10.15 21.85C11.65 21.85 12.4 21.05 12.4 19.35V11H10.5V7.5Z" fill="url(#markGradient)"/>
+  <path d="M21.3 22.2H25.8L23.55 17.7L21.3 22.2Z" fill="#D97706"/>
 </svg>
